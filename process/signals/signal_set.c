@@ -16,6 +16,7 @@ int test_signal(sigset_t * set, int signal){
  }
  return rt;
 }
+
 void add_signal2set(sigset_t * set, int signal){
  
  if( sigaddset(set, signal) == -1 ){

@@ -22,6 +22,7 @@ static void handler(int signal){
    }
     
 }
+
 void add_signal2set(sigset_t * set, int signal){
  
  if( sigaddset(set, signal) == -1 ){
