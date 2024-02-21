@@ -13,20 +13,15 @@ def main():
     print(f"PGRP (Process Group) or PGID (Process Group Identifier): {os.getpgid(pid)}")
     print(f"SID (Session Identifier): {os.getsid(pid)}")
 
-    try:
-        buff = os.getcwd()
-    except OSError:
-        handle_error("Error in getcwd()")
+    buff = os.getcwd()
 
     print(f"Working directory path: {buff}")
 
-    try:
-        limits = resource.getrlimit(resource.RLIMIT_NOFILE)
-    except Exception:
-        handle_error("Error in getrlimit()")
+    limits = resource.getrlimit(resource.RLIMIT_NOFILE)
 
-    print(f"Numero maximo de ficheros posible: {limits[1]}")
-    print(f"Numero maximo de ficheros recomendado: {limits[0]}")
+
+    print(f"Maximum number of files possible: {limits[1]}")
+    print(f"Maximum number of files recommended: {limits[0]}")
 
 if __name__ == "__main__":
     main()
