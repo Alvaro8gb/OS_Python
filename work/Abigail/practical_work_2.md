@@ -4,7 +4,7 @@ a) What happens if run_processes is executed without any arguments?
 The program will end and the phrase "Usage: python run_processes.py <number>" will be displayed.
 
 b) What will the first child process created during the execution of run_processes 3 do?
-![Run process image](Run_process.png)
+![Run process image](Run_Processes.png)
 
 The first child process forks another child process and them decrements the value that was entered as the argument and displays this to the terminal. This is recursive until the argument is less than 0.
 
