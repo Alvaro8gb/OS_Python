@@ -17,7 +17,7 @@ def main():
         sys.exit(1)
     elif pid == 0:  # Child process
         # Execute the command using exec
-        subprocess.run(command, shell=True)
+        subprocess.run(command)
         sys.exit(0)
     else:  # Parent process
         status = os.waitpid(pid, 0)
