@@ -13,9 +13,10 @@ def execute_command(command):
     
 if __name__ == "__main__":
     # Check if there is an argument
-    if len(sys.argv) != 2:
+    if len(sys.argv) < 2:
         print("Usage: python3 program.py \"command\"")
         sys.exit(1) # I think positive means error idk tho
 
-    bash_command = sys.argv[1]
+    bash_command = sys.argv[1:]
+    bash_command = " ".join(bash_command)
     execute_command(bash_command)
