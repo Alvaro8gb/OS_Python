@@ -17,7 +17,7 @@ b) **What will the first child process created during the execution of `run_proc
 
 c) **Draw the process tree resulting from the execution of `run_processes 3`.**
 
-           A
+.          A
        ____|____
       |         |
       B         C
