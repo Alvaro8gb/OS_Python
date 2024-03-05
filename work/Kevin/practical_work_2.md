@@ -1,4 +1,4 @@
-
+![image](https://github.com/AlmondRocca/OS_Python/assets/112829066/ac05a3d4-09a4-456b-9ae3-8d8d2e27a33b)
 # Exercise 2.1
 Respond this questions about [run_processes.py](../run_processes.py)
 
@@ -16,16 +16,7 @@ b) **What will the first child process created during the execution of `run_proc
 
 
 c) **Draw the process tree resulting from the execution of `run_processes 3`.**
-
-.          A
-       ____|____
-      |         |
-      B         C
-   __|__     __|__
-  |     |   |     |
-  D     E   F     G
- | |   | | | |   | |
- H I   J K L M   N O
+![image](https://github.com/AlmondRocca/OS_Python/assets/112829066/8d0e1f81-ff4b-4654-a4ab-a1923297f835)
 
 ---
 
