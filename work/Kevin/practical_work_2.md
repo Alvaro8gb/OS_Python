@@ -16,6 +16,7 @@ b) **What will the first child process created during the execution of `run_proc
 
 c) **Draw the process tree resulting from the execution of `run_processes 3`.**
 
+![image](https://github.com/AlmondRocca/OS_Python/assets/112829066/2ac8f57a-8991-43b9-ace9-5816342b9053)
 
 ---
 
