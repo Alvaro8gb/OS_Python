@@ -36,7 +36,7 @@ def main():
             child_pid, status = os.waitpid(child_pid, 0)
             # Cancel the alarm
             signal.alarm(0)
-            print("Exited with status 0")
+
     except KeyboardInterrupt:
         # Handle Ctrl-C
         print("Ctrl-C pressed. Killing child process...")
