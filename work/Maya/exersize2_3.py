@@ -5,20 +5,23 @@ import os
 import sys
 
 def create_daemon(command):
-    pid = os.fork()
+    try:
+        pid = os.fork()
 
-    if pid < 0:
-        print("Fork failed")
-        sys.exit(-1)        
-    elif pid > 0:
-        print(f"Parent process: {os.getpid()}")
-        sys.exit(0)
-    
-    print(f"Child process: {os.getpid()}")
-    os.setsid()
-    os.chdir('/tmp')
-    os.execvp(command[0], command)
-
+        if pid < 0:
+            print("Fork failed")
+            sys.exit(-1)        
+        elif pid > 0:
+            print(f"Parent process: {os.getpid()}")
+            sys.exit(0)
+        
+        print(f"Child process: {os.getpid()}")
+        os.setsid()
+        os.chdir('/tmp')
+        os.execvp(command[0], command)
+    except OSError as e:
+        print(f"Fork failed: {e}")
+        sys.exit(1)
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python script.py <command> [<arg1> <arg2> ...]")

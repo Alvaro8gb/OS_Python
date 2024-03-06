@@ -12,10 +12,10 @@ upload and image in this markdown
 c) **Draw the process tree resulting from the execution of `run_processes 3`.**
 
 Parent
-    |
-    Child 1
-        |
-        Child 2
+   |
+Child 1
+   |
+Child 2
 
 d) **What would be the total number of processes created during the execution of `run_processes 3`, not counting the original parent process?**
 
