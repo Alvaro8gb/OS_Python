@@ -1,4 +1,3 @@
-![image](https://github.com/AlmondRocca/OS_Python/assets/112829066/ac05a3d4-09a4-456b-9ae3-8d8d2e27a33b)
 # Exercise 2.1
 Respond this questions about [run_processes.py](../run_processes.py)
 
@@ -16,7 +15,7 @@ b) **What will the first child process created during the execution of `run_proc
 
 
 c) **Draw the process tree resulting from the execution of `run_processes 3`.**
-![image](https://github.com/AlmondRocca/OS_Python/assets/112829066/8d0e1f81-ff4b-4654-a4ab-a1923297f835)
+
 
 ---
 
@@ -29,7 +28,7 @@ d) **What would be the total number of processes created during the execution of
 ---
 e) **Reason whether, by executing `run_processes 3`, there could be any orphaned processes and/or any zombie processes. An orphaned process is considered to be one whose parent has died and is adopted by the `init` process.**
 
-`I don't think so as every parent process runs os.wait to wait for their children to finish executing before they end.`
+`Yes because when the child process forks it doesn't wait for the parent.`
 
 
 
