@@ -99,6 +99,31 @@ Daemon processes themselves are not inherently dangerous; in fact, they are cruc
 
 
 
+
+## Module Pythos
+
+
+1. **os Module:**
+   - **fork:** The `os.fork()` function is used to create a new process by duplicating the current process. It's commonly used in Unix-based systems.
+   - **wait:** The `os.wait()` function is used to wait for the child process to complete in the parent process.
+   - **exec:** The `os.exec*()` functions are used to replace the current process with a new one. These functions are often used after a fork to execute a different program.
+
+2. **time Module:**
+   - The `time` module provides various time-related functions.
+   - It includes functions to measure time intervals, handle timestamps, and convert between different time representations.
+
+3. **system Module:**
+   - The `os.system()` function is used to execute shell commands from within a Python script.
+   - It passes the specified command to the system shell and waits for the command to complete. (fork and wait inside)
+
+4. **subprocess Module:**
+   - The `subprocess` module provides more powerful and flexible ways to spawn and interact with new processes.
+   - It replaces older functions like `os.system()` and `os.spawn*()` with the `subprocess.run()` function.
+   - It allows you to capture the output, handle errors, and communicate with the new process more effectively.
+
+
+
+Note: The use of `fork` and `os.wait` is more common in Unix-like systems, and they might not work as expected on all platforms. Additionally, the `subprocess` module is often recommended for more portable and versatile process management in modern Python code.
 ## References
 
 - [States](https://www.geeksforgeeks.org/process-states-and-transitions-in-a-unix-process/)
