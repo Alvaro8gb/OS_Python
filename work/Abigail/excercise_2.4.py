@@ -1,7 +1,6 @@
 import os
 import signal
 import sys
-import subprocess
 import time
 
 def handler(signum, frame):
