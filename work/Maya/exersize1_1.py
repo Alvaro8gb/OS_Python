@@ -1,6 +1,5 @@
 import os
 import time
-from os import wait
 
 try:
     pid = os.fork()
@@ -13,8 +12,9 @@ try:
         # child process
         print(f"child")
         time.sleep(2)
-        print(f"Hello")
-        os._exit(0)
+        os.execvp("ls", ["ls", "-l"])
+        print("exec failed")
+        os._exit(1)
     else:
         # fork failed
         print("fork failed")
