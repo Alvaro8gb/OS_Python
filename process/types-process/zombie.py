@@ -9,5 +9,3 @@ else:
     print("I am Parent")
     while True:
         pass
-
-
