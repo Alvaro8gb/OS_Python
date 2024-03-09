@@ -4,56 +4,44 @@ Respond this questions about [run_processes.py](../run_processes.py)
 
 a) **What happens if `run_processes` is executed without any arguments?**
 
-    The program catches an error, as the program requires an argument to be run.
+
 ---
 
 b) **What will the first child process created during the execution of `run_processes 3` do?**
 
-    The first child process will fork again, then print the arguments that the command prompt will use to run the execute the program again. These arguments are the same as their original arguments, except the number has been decremented by one (the new number is 2).
+upload and image in this markdown
 
 ---
 
 c) **Draw the process tree resulting from the execution of `run_processes 3`.**
 
-                    3
-                    |
-                    -----
-                        |
-                        2
-                        |
-                    -------------------------
-                    |                       |
-                    1                       2
-                    |                       |
-                ----------                  1
-                |        |                  |
-                0        1              ---------
-                |        |              |       |
-                0        0              0       1
-                         |              |       | 
-                         0              0       0 
-                                                |
-                                                0
-                 
+
+---
+
 d) **What would be the total number of processes created during the execution of `run_processes 3`, not counting the original parent process?**
 
-    14 processes.
+
 ---
 
 e) **Reason whether, by executing `run_processes 3`, there could be any orphaned processes and/or any zombie processes. An orphaned process is considered to be one whose parent has died and is adopted by the `init` process.**
 
-
-    I believe that there can be orphaned/zombie processes that stem from 'run_processes 3.' In the program, an if-else sequence is used to determine whether the current process is a parent or a child process. In the the statement for the parent process, the operating system is instructed to wait until any child process is completed, as given by the line 'os.waitpid(pid, 0).' The argument of 0 means that it will wait for any child process to be completed, meaning that if other child processes exist, they will be abandoned by their parent process.
-
-
 # Exercise 2.2
-
-See killer.py
-
-# Exercise 2.3
-
-See daemon.py and daemon_function.py
+The objective of this exercise is to develop a process through the use of Python’s os and signal modules that simulates `kill -9 <pid>` command
 
 # Exercise 2.3
+Create a daemon process.
+ Daemon processes are started working when the system will be bootstrapped and terminate only when the system is  shutdown. ( dont have parents)
+ It does not have a controlling terminal. It always runs in the background.
 
-See timer.py
+# Exercise 2.4
+
+Code in Python for Unix the program "timer" whose invocation is:
+`timer segs command [args...]`
+
+capable of limiting the maximum execution time of the command indicated as an argument:
+
+- The indicated command (mandate) will be executed in a child process with the arguments (args...) indicated in the invocation.
+- If the user presses Ctrl-C the indicated command (mandate) should die, but the parent process (temporizar) should not.
+- If the child process does not finish before the time (seconds) indicated, the parent should warn it by sending the proper signal.
+- If it has not finished (the child process) one second later, the parent should kill it.
+- In any of these cases, the parent process must decode the termination status of the child process, display said status on the standard output, and terminate correctly.

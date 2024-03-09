@@ -16,5 +16,6 @@ The script forks and then executes the command with `exec`.
 
 # Exercise 1.3
 
-Execute zombie.py
-Upload a photo that demonstrate that the process is a zombie
+See Exercise1.3.png
+
+The zombie process is the process at the top of htop.
