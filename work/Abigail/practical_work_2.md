@@ -10,16 +10,15 @@ The first child process forks another child process and them decrements the valu
 
 c) Draw the process tree resulting from the execution of run_processes 3.
 
-Parent
-|
-|
-Child
-|
-|
-Child 2
+    Parent
+    |     |  
+Child     Child
+|   |     |   |
+C3  C4   C5   C6
+
 
 d) What would be the total number of processes created during the execution of run_processes 3, not counting the original parent process? 
-The total number of processes created during the execution of run_processes 3 would be 2.
+The total number of processes created during the execution of run_processes 3 would be 6.
 
 e) Reason whether, by executing run_processes 3, there could be any orphaned processes and/or any zombie processes. An orphaned process is considered to be one whose parent has died and is adopted by the init process.
 
