@@ -9,16 +9,11 @@ b) What will the first child process created during the execution of run_process
 The first child process forks another child process and them decrements the value that was entered as the argument and displays this to the terminal. This is recursive until the argument is less than 0.
 
 c) Draw the process tree resulting from the execution of run_processes 3.
-
-    Parent
-    |     |  
-Child     Child
-|   |     |   |
-C3  C4   C5   C6
+![Process Tree image](process_diagram.jpg)
 
 
 d) What would be the total number of processes created during the execution of run_processes 3, not counting the original parent process? 
-The total number of processes created during the execution of run_processes 3 would be 6.
+The total number of processes created during the execution of run_processes 3 would be 14.
 
 e) Reason whether, by executing run_processes 3, there could be any orphaned processes and/or any zombie processes. An orphaned process is considered to be one whose parent has died and is adopted by the init process.
 
