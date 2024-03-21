@@ -33,7 +33,7 @@ Create a daemon process.
  Daemon processes are started working when the system will be bootstrapped and terminate only when the system is  shutdown. ( dont have parents)
  It does not have a controlling terminal. It always runs in the background.
 
-# Exercise 2.3
+# Exercise 2.4
 
 Code in Python for Unix the program "timer" whose invocation is:
 `timer segs command [args...]`

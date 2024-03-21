@@ -10,21 +10,14 @@ It will print "Usage: python [name of the program] <number>"
 b) **What will the first child process created during the execution of `run_processes 3` do?**
 It will fork again and print "python [name of program] 2"
 
-## [2.1B_output.png](./2.1B_output.png)
+## [2.1B_output.png](./2.1B_output.png)ol
 
 c) **Draw the process tree resulting from the execution of `run_processes 3`.**
-init
-|
-|
-child 1
-|
-|
-child 2
 
----
+## [OSprob2.jpeg](./OSprob2.jpeg)
 
 d) **What would be the total number of processes created during the execution of `run_processes 3`, not counting the original parent process?**
-2 processes would be created
+14 processes would be created
 
 ---
 
