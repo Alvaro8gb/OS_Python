@@ -8,7 +8,7 @@ dataset = datasets.load_breast_cancer()
 df = pd.DataFrame(data=dataset.data, columns=dataset.feature_names)
 df['target'] = dataset.target
 
-print(dataset.DESCR)
+#print(dataset.DESCR)
 
 print(dataset.feature_names)
 print(df['radius error'][0]) # Acces to row 0
@@ -16,3 +16,4 @@ print(df['radius error'][0]) # Acces to row 0
 df_numeric = df.select_dtypes(include=['number'])
 
 print(df_numeric.columns)
+
