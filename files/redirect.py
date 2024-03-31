@@ -12,6 +12,8 @@ def main():
     print("File descriptor", fd_d)
     print("Executing ..")
 
+    os.write(1, "ByBYe".encode())
+
     os.close(fd_d)
    
 
