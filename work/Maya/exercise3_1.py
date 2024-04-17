@@ -8,21 +8,17 @@ data = {'A': [1, 2, 3, 4],
 df = pd.DataFrame(data)
 
 
-def calculate_mean(df, result, lock, column):
+def calculate_mean(df, result, column):
     start_time = time()
     column_avg = df[column].mean()
     end_time = time()
-    lock.acquire()
-    try:
-        result[column] = {'mean': column_avg, 'execution_time': end_time - start_time}
-    finally:
-        lock.release()
+    result[column] = {'mean': column_avg, 'execution_time': end_time - start_time}
 
 def calculate_mean_threaded(df, lock, result, columns, num_threads):
     threads = []
 
     for i in range(num_threads):
-        thread = threading.Thread(target=calculate_mean, args=(df, result, lock, columns[i]))
+        thread = threading.Thread(target=calculate_mean, args=(df, result, columns[i]))
         thread.start()
         threads.append(thread)
 

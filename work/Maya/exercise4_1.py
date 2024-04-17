@@ -10,7 +10,11 @@ def display_permission(file_path):
     print(f"Write permission: {'Yes' if permission & 0o200 else 'No'}")
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Need the file path as an argument")
+    if len(sys.argv) == 2:
+        file_path = sys.argv[1]
+    elif len(sys.argv) == 1:
+        file_path = input("Enter the file path: ")
+    else:
+        print("Invalid number of arguments")
         sys.exit(1)
     display_permission(sys.argv[1])
