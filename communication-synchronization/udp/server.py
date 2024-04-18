@@ -4,8 +4,7 @@ def main():
 
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     
-    # Bind the socket to any available interface on port 8002
-    server_socket.bind(('localhost', 8002))
+    server_socket.bind(('0.0.0.0', 8000))
     
     print("UDP server up and listening")
 

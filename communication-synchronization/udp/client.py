@@ -2,19 +2,15 @@ import socket
 import sys
 
 def main():
-    # Use sys.argv to get the command line arguments.
-    if len(sys.argv) < 2:
-        print("Usage: python script.py hostname")
-        return
-
-    hostname = sys.argv[1]
+  
+    hostname = "localhost"
     
     # Convert hostname to IP address
     host_ip = socket.gethostbyname(hostname)
     
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     
-    port = 8002  # Typically echo server port; replace with your port if different
+    port = 8000  # Typically echo server port; replace with your port if different
     
     # Loop to send data
     while True:
