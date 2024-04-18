@@ -6,10 +6,10 @@ def redirect(file_path):
             sys.stdout = f
             print("Hello, World!")
             print("Redirected from standard output")
+            sys.stdout = sys.__stdout__
+            print("This is defualt stdout")
     except Exception as e:
-        print(e)
-    finally:
-        sys.stdout = sys.__stdout__
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
