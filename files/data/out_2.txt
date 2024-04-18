@@ -1,0 +1,7 @@
+copy.py
+data
+exercises
+lseek.py
+redirect_ls.py
+redirect.py
+solution

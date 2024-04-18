@@ -4,7 +4,7 @@ import sys
 def main():
     
     if len(sys.argv) != 2:
-        print("Usage: python", sys.argv[0] ,"<number>")
+        print("Usage: python3", sys.argv[0] ,"<number>")
         return 1
 
     number = int(sys.argv[1])
@@ -17,9 +17,9 @@ def main():
     if pid == 0:
         # Child process
         os.fork() # Fork again
-        arguments = ["python", sys.argv[0], str(number-1)]
+        arguments = ["python3", sys.argv[0], str(number-1)]
         print(arguments)
-        os.execvp("python", arguments) 
+        os.execvp("python3", arguments) 
     else:
         # Parent process
         os.waitpid(pid, 0)
