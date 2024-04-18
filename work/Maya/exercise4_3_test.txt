@@ -1,0 +1,2 @@
+Hello, World!
+Redirected from standard output
