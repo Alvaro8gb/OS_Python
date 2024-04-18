@@ -24,7 +24,7 @@ docker build -t my-image .
 For running in the background
 
 ```bash
- docker run -it --name container1 -p 9000:8000/udp my-image
+ docker run -d -it --name container1 -p 9000:8000/udp my-image
  ```
 
 4. Check conection 
