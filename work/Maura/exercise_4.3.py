@@ -16,15 +16,14 @@ def main():
 
     # open the file in append mode to save prev writes
     with open(output_file_path, 'a') as output_file:
-        # Redirect stdout and stderr to the file
+        # redirect stdout and stderr to file
         sys.stdout = output_file
         sys.stderr = output_file
 
-        # Example output
         print("This is a standard output message.")
         print("This is another standard output message.")
 
-        # Simulate an error message by printing to stderr
+        # simulate an error message by printing to stderr
         print("This is a standard error message.", file=sys.stderr)
         print("This is another error message.", file=sys.stderr)
 
