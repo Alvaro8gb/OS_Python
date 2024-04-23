@@ -19,7 +19,7 @@ docker build -t my-image .
 
 3. Run the image
 ```bash
- docker run -it --name container1 -p 9000:8000 my-image
+ docker run -it --name container1 -p 9000:8000/udp my-image
  ```
 For running in the background
 
