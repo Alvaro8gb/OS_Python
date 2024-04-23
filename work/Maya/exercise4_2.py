@@ -1,34 +1,27 @@
 import os
 
-def create_symbolic_link(target, link_name):
-    os.symlink(target, link_name)
+directory_og = "4_2orig"
+file_name_og = "4_2orig.txt"
+file_hard_link = "4_2orig_hardlink.txt"
 
-def create_hard_link(target, link_name):
-    os.link(target, link_name)
+symbolic_link_file = "symbolic_link_file"
+symbolic_link_dir = "symbolic_link_directory"
+hard_link_file = "hard_link_file"
 
-def get_inode(file_path):
-    return os.stat(file_path).st_ino
+os.symlink(file_name_og, symbolic_link_file)
+os.symlink(directory_og, symbolic_link_dir)
 
-def main():
-    target_file = "target_file.txt"
-    target_dir = "target_directory"
-    
-    if not os.path.exists(target_file):
-        open(target_file, 'w').close()
-    if not os.path.exists(target_dir):
-        os.mkdir(target_dir)
-    
-    create_symbolic_link(target_file, "symbolic_link_to_file")
-    create_symbolic_link(target_dir, "symbolic_link_to_directory")
-    
-    create_hard_link(target_file, "hard_link_to_file")
-    
-    print("Inodes:")
-    print("Symbolic link to file:", get_inode("symbolic_link_to_file"))
-    print("Symbolic link to directory:", get_inode("symbolic_link_to_directory"))
-    print("Hard link to file:", get_inode("hard_link_to_file"))
-    print("Target file:", get_inode(target_file))
-    print("Target directory:", get_inode(target_dir))
+os.link(file_hard_link, hard_link_file)
 
-if __name__ == "__main__":
-    main()
+def display(path):
+    info = os.stat(path)
+    inode = info.st_ino
+    link_count = info.st_nlink
+    print(f'{path}: inode = {inode}, link count = {link_count}')
+
+print('Symbolic links:')
+display(symbolic_link_file)
+display(symbolic_link_dir)
+
+print('\nHard link:')
+display(hard_link_file)

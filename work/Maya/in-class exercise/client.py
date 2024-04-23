@@ -1,3 +1,5 @@
+# worked with Maura and Abby
+
 import socket
 import sys
 
@@ -20,7 +22,8 @@ def main():
     while True:
 
         data = input("Enter data to send (or 'exit' to quit): ")
-        if data == 'exit':
+        if data == 'q':
+            sock.sendto(data.encode('utf-8'), (host_ip, port))
             break
         
         # Send data

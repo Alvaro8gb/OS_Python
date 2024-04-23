@@ -1,2 +1,2 @@
-Hello, World!
-Redirected from standard output
+Standard output test
+Standard error test
