@@ -1,0 +1,2 @@
+Standard output test
+Standard error test
