@@ -1,0 +1,48 @@
+<0_Unique>
+Shout-out to stdout!
+This is an output test.
+There's nothing standard about this output!
+</0_Unique>
+<0_Identical>
+It's just big me!
+Everything they say about me is true.
+They not like us!
+</0_Identical>
+Stderr is simply not fair!
+This is an error test.
+There's nothing standard about this error!
+It's just big me!
+Everything they say about me is true.
+They not like us!
+<1_Unique>
+Shout-out to stdout!
+This is an output test.
+There's nothing standard about this output!
+</1_Unique>
+<1_Identical>
+It's just big me!
+Everything they say about me is true.
+They not like us!
+</1_Identical>
+Stderr is simply not fair!
+This is an error test.
+There's nothing standard about this error!
+It's just big me!
+Everything they say about me is true.
+They not like us!
+<2_Unique>
+Shout-out to stdout!
+Stderr is simply not fair!
+This is an error test.
+This is an output test.
+There's nothing standard about this output!
+There's nothing standard about this error!
+</2_Unique>
+<2_Identical>
+It's just big me!
+It's just big me!
+Everything they say about me is true.
+Everything they say about me is true.
+They not like us!
+They not like us!
+</2_Identical>
